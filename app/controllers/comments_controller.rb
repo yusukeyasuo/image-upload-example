@@ -5,7 +5,7 @@ class CommentsController < ApplicationController
 
   def create
     @comment = Comment.create params.require(:comment).permit(:content, :image)
-    redirect_to @comment    
+    redirect_to @comment
   end
 
   def show
